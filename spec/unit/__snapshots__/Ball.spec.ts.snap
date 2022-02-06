@@ -1,0 +1,334 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Ball draw renders ball to canvas 1`] = `
+Array [
+  Object {
+    "props": Object {
+      "value": "#ffffff",
+    },
+    "transform": Array [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "fillStyle",
+  },
+  Object {
+    "props": Object {
+      "height": 10,
+      "width": 10,
+      "x": -5,
+      "y": -5,
+    },
+    "transform": Array [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "fillRect",
+  },
+  Object {
+    "props": Object {
+      "value": "#333333",
+    },
+    "transform": Array [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "strokeStyle",
+  },
+]
+`;
+
+exports[`Ball draw renders footprints to canvas 1`] = `
+Array [
+  Object {
+    "props": Object {
+      "value": "#ffffff",
+    },
+    "transform": Array [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "fillStyle",
+  },
+  Object {
+    "props": Object {
+      "height": 10,
+      "width": 10,
+      "x": -5,
+      "y": -5,
+    },
+    "transform": Array [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "fillRect",
+  },
+  Object {
+    "props": Object {
+      "value": "#333333",
+    },
+    "transform": Array [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "strokeStyle",
+  },
+  Object {
+    "props": Object {
+      "height": 10,
+      "width": 10,
+      "x": 253.90490399999942,
+      "y": 298.8599039999993,
+    },
+    "transform": Array [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "strokeRect",
+  },
+  Object {
+    "props": Object {
+      "height": 10,
+      "width": 10,
+      "x": 270.25293599999924,
+      "y": 282.52415999999914,
+    },
+    "transform": Array [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "strokeRect",
+  },
+  Object {
+    "props": Object {
+      "height": 10,
+      "width": 10,
+      "x": 286.674695999999,
+      "y": 266.1147039999991,
+    },
+    "transform": Array [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "strokeRect",
+  },
+  Object {
+    "props": Object {
+      "height": 10,
+      "width": 10,
+      "x": 303.5146239999988,
+      "y": 249.2875919999991,
+    },
+    "transform": Array [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "strokeRect",
+  },
+  Object {
+    "props": Object {
+      "height": 10,
+      "width": 10,
+      "x": 319.73939999999857,
+      "y": 233.07462399999923,
+    },
+    "transform": Array [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "strokeRect",
+  },
+  Object {
+    "props": Object {
+      "height": 10,
+      "width": 10,
+      "x": 336.38234399999834,
+      "y": 216.44396799999933,
+    },
+    "transform": Array [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "strokeRect",
+  },
+  Object {
+    "props": Object {
+      "height": 10,
+      "width": 10,
+      "x": 352.9245039999982,
+      "y": 199.91386399999945,
+    },
+    "transform": Array [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "strokeRect",
+  },
+  Object {
+    "props": Object {
+      "height": 10,
+      "width": 10,
+      "x": 369.88941599999794,
+      "y": 182.9615519999996,
+    },
+    "transform": Array [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "strokeRect",
+  },
+  Object {
+    "props": Object {
+      "height": 10,
+      "width": 10,
+      "x": 386.75354399999776,
+      "y": 166.10975999999977,
+    },
+    "transform": Array [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "strokeRect",
+  },
+  Object {
+    "props": Object {
+      "height": 10,
+      "width": 10,
+      "x": 403.69139999999754,
+      "y": 149.1842079999999,
+    },
+    "transform": Array [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "strokeRect",
+  },
+]
+`;
+
+exports[`Ball instance instantiates a ball 1`] = `
+Ball {
+  "_radius": 5,
+  "_x": 0,
+  "_y": 0,
+  "accel": 8,
+  "dxChanged": false,
+  "dyChanged": false,
+  "footprintCount": 0,
+  "footprints": Array [],
+  "maxX": 635,
+  "maxY": 463,
+  "minX": 5,
+  "minY": 17,
+  "showFootprints": undefined,
+  "speed": 157.5,
+}
+`;
+
+exports[`Ball instance setdir 1`] = `
+Ball {
+  "_dx": -191,
+  "_dy": 1,
+  "_radius": 5,
+  "_x": 0,
+  "_y": 0,
+  "accel": 8,
+  "dxChanged": true,
+  "dyChanged": false,
+  "footprintCount": 0,
+  "footprints": Array [],
+  "maxX": 635,
+  "maxY": 463,
+  "minX": 5,
+  "minY": 17,
+  "showFootprints": undefined,
+  "speed": 157.5,
+}
+`;
+
+exports[`Ball instance setpos 1`] = `
+Ball {
+  "_left": 5,
+  "_radius": 5,
+  "_right": 15,
+  "_x": 10,
+  "_y": 10,
+  "accel": 8,
+  "bottom": 15,
+  "dxChanged": false,
+  "dyChanged": false,
+  "footprintCount": 0,
+  "footprints": Array [],
+  "maxX": 635,
+  "maxY": 463,
+  "minX": 5,
+  "minY": 17,
+  "showFootprints": undefined,
+  "speed": 157.5,
+  "top": 5,
+}
+`;

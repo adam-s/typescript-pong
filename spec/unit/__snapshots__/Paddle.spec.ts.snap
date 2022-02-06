@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Paddle instantiates a paddle 1`] = `
+Paddle {
+  "_auto": false,
+  "_bottom": 270,
+  "_down": 0,
+  "_left": 0,
+  "_right": 12,
+  "_top": 210,
+  "_up": 0,
+  "height": 60,
+  "level": Object {
+    "aiError": 120,
+    "aiReaction": 1,
+  },
+  "maxY": 408,
+  "minY": 12,
+  "showPredications": undefined,
+  "speed": 198,
+  "width": 12,
+  "x": 0,
+  "y": 210,
+}
+`;
+
+exports[`Paddle setdir negative 1`] = `
+Paddle {
+  "_auto": false,
+  "_bottom": 270,
+  "_down": 0,
+  "_left": 0,
+  "_right": 12,
+  "_top": 210,
+  "_up": 10,
+  "height": 60,
+  "level": Object {
+    "aiError": 120,
+    "aiReaction": 1,
+  },
+  "maxY": 408,
+  "minY": 12,
+  "showPredications": undefined,
+  "speed": 198,
+  "width": 12,
+  "x": 0,
+  "y": 210,
+}
+`;
+
+exports[`Paddle setdir positive 1`] = `
+Paddle {
+  "_auto": false,
+  "_bottom": 270,
+  "_down": 10,
+  "_left": 0,
+  "_right": 12,
+  "_top": 210,
+  "_up": 0,
+  "height": 60,
+  "level": Object {
+    "aiError": 120,
+    "aiReaction": 1,
+  },
+  "maxY": 408,
+  "minY": 12,
+  "showPredications": undefined,
+  "speed": 198,
+  "width": 12,
+  "x": 0,
+  "y": 210,
+}
+`;
+
+exports[`Paddle setpos negative 1`] = `
+Paddle {
+  "_auto": false,
+  "_bottom": 50,
+  "_down": 0,
+  "_left": -10,
+  "_right": 2,
+  "_top": -10,
+  "_up": 0,
+  "height": 60,
+  "level": Object {
+    "aiError": 120,
+    "aiReaction": 1,
+  },
+  "maxY": 408,
+  "minY": 12,
+  "showPredications": undefined,
+  "speed": 198,
+  "width": 12,
+  "x": -10,
+  "y": -10,
+}
+`;
+
+exports[`Paddle setpos positive 1`] = `
+Paddle {
+  "_auto": false,
+  "_bottom": 70,
+  "_down": 0,
+  "_left": 10,
+  "_right": 22,
+  "_top": 10,
+  "_up": 0,
+  "height": 60,
+  "level": Object {
+    "aiError": 120,
+    "aiReaction": 1,
+  },
+  "maxY": 408,
+  "minY": 12,
+  "showPredications": undefined,
+  "speed": 198,
+  "width": 12,
+  "x": 10,
+  "y": 10,
+}
+`;

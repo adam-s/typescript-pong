@@ -1,0 +1,192 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu draw a menu 1`] = `
+Array [
+  Object {
+    "props": Object {
+      "dHeight": 3,
+      "dWidth": 3,
+      "dx": 10,
+      "dy": 100,
+      "img": <img />,
+      "sHeight": 3,
+      "sWidth": 3,
+      "sx": 0,
+      "sy": 0,
+    },
+    "transform": Array [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "drawImage",
+  },
+  Object {
+    "props": Object {
+      "dHeight": 3,
+      "dWidth": 3,
+      "dx": 87,
+      "dy": 100,
+      "img": <img />,
+      "sHeight": 3,
+      "sWidth": 3,
+      "sx": 0,
+      "sy": 0,
+    },
+    "transform": Array [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "drawImage",
+  },
+]
+`;
+
+exports[`Menu draw a menu 2`] = `
+Array [
+  Object {
+    "props": Object {
+      "dHeight": 3,
+      "dWidth": 3,
+      "dx": 10,
+      "dy": 100,
+      "img": <img />,
+      "sHeight": 3,
+      "sWidth": 3,
+      "sx": 0,
+      "sy": 0,
+    },
+    "transform": Array [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "drawImage",
+  },
+  Object {
+    "props": Object {
+      "dHeight": 3,
+      "dWidth": 3,
+      "dx": 87,
+      "dy": 100,
+      "img": <img />,
+      "sHeight": 3,
+      "sWidth": 3,
+      "sx": 0,
+      "sy": 0,
+    },
+    "transform": Array [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "drawImage",
+  },
+  Object {
+    "props": Object {
+      "dHeight": 3,
+      "dWidth": 3,
+      "dx": -53,
+      "dy": 600,
+      "img": <img />,
+      "sHeight": 3,
+      "sWidth": 3,
+      "sx": 0,
+      "sy": 0,
+    },
+    "transform": Array [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "drawImage",
+  },
+]
+`;
+
+exports[`Menu draw a menu 3`] = `
+Array [
+  Object {
+    "props": Object {
+      "dHeight": 3,
+      "dWidth": 3,
+      "dx": 10,
+      "dy": 100,
+      "img": <img />,
+      "sHeight": 3,
+      "sWidth": 3,
+      "sx": 0,
+      "sy": 0,
+    },
+    "transform": Array [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "drawImage",
+  },
+  Object {
+    "props": Object {
+      "dHeight": 3,
+      "dWidth": 3,
+      "dx": 87,
+      "dy": 100,
+      "img": <img />,
+      "sHeight": 3,
+      "sWidth": 3,
+      "sx": 0,
+      "sy": 0,
+    },
+    "transform": Array [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "drawImage",
+  },
+  Object {
+    "props": Object {
+      "dHeight": 3,
+      "dWidth": 3,
+      "dx": 150,
+      "dy": 600,
+      "img": <img />,
+      "sHeight": 3,
+      "sWidth": 3,
+      "sx": 0,
+      "sy": 0,
+    },
+    "transform": Array [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "drawImage",
+  },
+]
+`;

@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pong renders to canvas not playing 1`] = `Array []`;
+
+exports[`Pong renders to canvas when playing 1`] = `Array []`;
