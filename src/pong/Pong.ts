@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { Game } from '../engine/Engine';
-import { Keys } from '../utils';
+import { Keys, NumPlayers } from '../utils';
 import { Ball } from './Ball';
 import { Court } from './Court';
 import { Menu } from './Menu';
@@ -133,7 +133,7 @@ export class Pong implements Game {
     this.start(2);
   }
 
-  start(numPlayers: 0 | 1 | 2) {
+  start(numPlayers: NumPlayers) {
     if (!this._playing) {
       this._scores = [0, 0];
       this._playing = true;

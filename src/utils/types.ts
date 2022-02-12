@@ -30,6 +30,8 @@ export type BlockElement = Dimensions & Position;
 
 export type ImageElement = { image: HTMLImageElement } & Position;
 
+export type NumPlayers = 0 | 1 | 2;
+
 export enum Keys {
   // NUMPAD
   Num0 = 'Numpad0',

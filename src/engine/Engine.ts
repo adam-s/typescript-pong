@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { Loadable, Loader } from '../loader';
-import { timestamp, PartialBy } from '../utils';
+import { timestamp, PartialBy, NumPlayers } from '../utils';
 
 export interface Game {
   init?: () => void;
   width: number;
   height: number;
-  start: (numPlayers: number) => void;
+  start: (numPlayers: NumPlayers) => void;
   stop: () => void;
   update: (dt: number) => void;
   draw: (ctx: CanvasRenderingContext2D) => void;
