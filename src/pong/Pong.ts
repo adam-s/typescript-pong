@@ -23,7 +23,7 @@ export const Config = {
   ballSpeed: 4, // should be able to cross court horizontally in 4 seconds, at starting speed ...
   ballAccel: 8, // ... but accelerate as time passes
   ballRadius: 5,
-  playSounds: true,
+  playSounds: false,
   showFootprints: false,
   showPredications: false,
 } as const;
@@ -76,8 +76,6 @@ export class Pong implements Game {
 
   private _ball: Ball;
 
-  private _images: { [key: string]: HTMLImageElement } = {};
-
   private _playSounds = false;
 
   constructor() {
@@ -118,18 +116,10 @@ export class Pong implements Game {
       wallWidth: Config.wallWidth,
     });
 
-    // The menu requires loading images first so this has to be called in
-    // an async init() method 😡 I'm and idiot.
-    const promises = Object.values(images).map((image) => image.ready);
-    Promise.all(promises).then(() => {
-      for (const image in images) {
-        this._images[image] = images[image as keyof typeof images].image;
-      }
-      this._menu = new Menu({
-        images: this._images,
-        width: Config.width,
-        wallWidth: Config.wallWidth,
-      });
+    this._menu = new Menu({
+      images: images,
+      width: Config.width,
+      wallWidth: Config.wallWidth,
     });
   }
 

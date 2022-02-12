@@ -106,6 +106,8 @@ export class AudioSource implements Audio, Loadable<AudioBuffer> {
       return this.data;
     }
     const arraybuffer = await this._resource.load();
+
+    // Let's not load this until play
     const audiobuffer = await this.decodeAudio(arraybuffer.slice(0));
     this._duration =
       typeof audiobuffer === 'object' ? audiobuffer.duration : undefined;

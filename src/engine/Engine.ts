@@ -80,18 +80,15 @@ export class Engine {
     this._fps = this._options.fps;
     this._interval = 1000.0 / this._options.fps;
 
-    // Set or create the front canvas element
-    if (this._options.canvasElementId) {
-      this._front = <HTMLCanvasElement>(
-        document.getElementById(this._options.canvasElementId)
-      );
-    } else {
+    this._front = <HTMLCanvasElement>(
+      document.getElementById(this._options.canvasElementId)
+    );
+    if (!this._front) {
       this._front = <HTMLCanvasElement>document.createElement('canvas');
     }
 
     // Create a back canvas element
     this._back = <HTMLCanvasElement>document.createElement('canvas');
-
     this._width = this.game.width;
     this._height = this.game.height;
 
@@ -239,9 +236,8 @@ export class Engine {
 
   alert(msg: string) {
     this.stop(); // alert blocks thread, so need to stop game loop in order to avoid sending huge dt values to next update
-    const result = window.alert(msg);
+    window.alert(msg);
     this.start();
-    return result;
   }
 
   confirm(msg: string) {

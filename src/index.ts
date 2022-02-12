@@ -13,10 +13,10 @@ engine.start(loader).then(() => {
     'predictions'
   ) as HTMLInputElement;
 
-  // engine.showStats(stats.checked);
-  // pong.playSounds(sound.checked);
-  // pong.showFootprints(footprints.checked);
-  // pong.showPredictions(predictions.checked);
+  engine.showStats(stats.checked);
+  pong.playSounds(sound.checked);
+  pong.showFootprints(footprints.checked);
+  pong.showPredictions(predictions.checked);
 
   stats.addEventListener('change', () => engine.showStats(stats.checked));
   sound.addEventListener('change', () => pong.playSounds(sound.checked));

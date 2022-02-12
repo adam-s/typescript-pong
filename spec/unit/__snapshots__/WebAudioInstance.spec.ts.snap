@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WebAudioInstance can be created 1`] = `
+WebAudioInstance {
+  "_audioContext": Object {
+    "createBufferSource": [Function],
+    "createGain": [MockFunction],
+    "currentTime": 1,
+    "decodeAudioData": [MockFunction],
+    "destination": "DESTINATION_NODE",
+  },
+  "_createNewBufferSource": [MockFunction],
+  "_currentOffset": 0,
+  "_duration": undefined,
+  "_instance": Object {
+    "buffer": Object {
+      "duration": 5000,
+      "gain": 1,
+      "length": 6,
+      "numberOfChannels": undefined,
+      "sampleRate": 1,
+    },
+    "connect": [MockFunction],
+    "onended": [MockFunction],
+    "playbackRate": Object {
+      "setValueAtTime": [MockFunction],
+      "value": 1,
+    },
+    "start": [MockFunction],
+    "stop": [MockFunction],
+  },
+  "_isPaused": false,
+  "_isPlaying": false,
+  "_loop": false,
+  "_rememberStartTime": [MockFunction],
+  "_src": Object {
+    "duration": 5000,
+    "gain": 1,
+    "length": 6,
+    "numberOfChannels": undefined,
+    "sampleRate": 1,
+  },
+  "_volume": 1,
+  "_volumeNode": Object {
+    "connect": [MockFunction],
+    "gain": Object {
+      "setTargetAtTime": [MockFunction],
+      "value": 1,
+    },
+  },
+  "_wireUpOnEnded": [MockFunction],
+}
+`;

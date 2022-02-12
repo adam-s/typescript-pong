@@ -17,7 +17,6 @@ export class WebAudioInstance implements Audio {
   private _loop = false;
   public set loop(value: boolean) {
     this._loop = value;
-
     if (this._instance) {
       this._instance.loop = value;
       this._wireUpOnEnded();
@@ -28,21 +27,19 @@ export class WebAudioInstance implements Audio {
   }
 
   public set volume(value: number) {
-    value = clamp(value, 0, 1.0);
-
-    this._volume = value;
+    this._volume = clamp(value, 0, 1.0);
 
     if (this._isPlaying && this._volumeNode.gain.setTargetAtTime) {
       // https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/setTargetAtTime
       // After each .1 seconds timestep, the target value will ~63.2% closer to the target value.
       // This exponential ramp provides a more pleasant transition in gain
       this._volumeNode.gain.setTargetAtTime(
-        value,
+        this._volume,
         this._audioContext.currentTime,
         0.1
       );
     } else {
-      this._volumeNode.gain.value = value;
+      this._volumeNode.gain.value = this._volume;
     }
   }
   public get volume(): number {
@@ -205,7 +202,6 @@ export class WebAudioInstance implements Audio {
     this._instance.buffer = this._src;
     this._instance.loop = this.loop;
     this._instance.playbackRate.setValueAtTime(1.0, 0);
-
     this._instance.connect(this._volumeNode);
   }
 }

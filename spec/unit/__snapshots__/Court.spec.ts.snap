@@ -4,7 +4,7 @@ exports[`Court renders the court to canvas draws 1`] = `
 Array [
   Object {
     "props": Object {
-      "value": "#353535",
+      "value": "#ffffff",
     },
     "transform": Array [
       1,
@@ -74,7 +74,7 @@ exports[`Court renders the court to canvas draws a digit 1`] = `
 Array [
   Object {
     "props": Object {
-      "value": "#353535",
+      "value": "#ffffff",
     },
     "transform": Array [
       1,

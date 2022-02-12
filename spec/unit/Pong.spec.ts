@@ -1,6 +1,8 @@
 import 'jest-canvas-mock';
+import { AudioSource, ImageSource } from '../../src/Loader';
 import { Pong, Ball, Court, Menu, Paddle } from '../../src/pong';
 
+jest.mock('../../src/loader/ImageSource');
 jest.mock('../../src/pong/Ball');
 jest.mock('../../src/pong/Court');
 jest.mock('../../src/pong/Menu');
@@ -17,9 +19,15 @@ describe('Pong', function () {
       return {
         loader: jest.fn(),
         images: {
-          press1: { image: new Image() },
-          press2: { image: new Image() },
-          winner: { image: new Image() },
+          press1: new ImageSource('images/press1.png'),
+          press2: new ImageSource('images/press2.png'),
+          winner: new ImageSource('images/winner.png'),
+        },
+        sounds: {
+          ping: new AudioSource('/assets/sounds/ping.wav'),
+          pong: new AudioSource('/assets/sounds/pong.wav'),
+          wall: new AudioSource('/assets/sounds/wall.wav'),
+          goal: new AudioSource('/assets/sounds/goal.wav'),
         },
       };
     });
@@ -197,7 +205,7 @@ describe('Pong', function () {
       const spy = jest
         .spyOn(implementation, 'startDemo')
         .mockImplementation(() => undefined);
-      const event = new KeyboardEvent('keydown', { key: 'Digit0' });
+      const event = new KeyboardEvent('keydown', { code: 'Digit0' });
       implementation.onkeydown(event);
       expect(spy).toBeCalled();
     });
@@ -206,7 +214,7 @@ describe('Pong', function () {
       const spy = jest
         .spyOn(implementation, 'startSinglePlayer')
         .mockImplementation(() => undefined);
-      const event = new KeyboardEvent('keydown', { key: 'Digit1' });
+      const event = new KeyboardEvent('keydown', { code: 'Digit1' });
       implementation.onkeydown(event);
       expect(spy).toBeCalled();
     });
@@ -215,7 +223,7 @@ describe('Pong', function () {
       const spy = jest
         .spyOn(implementation, 'startDoublePlayer')
         .mockImplementation(() => undefined);
-      const event = new KeyboardEvent('keydown', { key: 'Digit2' });
+      const event = new KeyboardEvent('keydown', { code: 'Digit2' });
       implementation.onkeydown(event);
       expect(spy).toBeCalled();
     });
@@ -224,7 +232,7 @@ describe('Pong', function () {
       const spy = jest
         .spyOn(implementation, 'stop')
         .mockImplementation(() => undefined);
-      const event = new KeyboardEvent('keydown', { key: 'Escape' });
+      const event = new KeyboardEvent('keydown', { code: 'Escape' });
       implementation.onkeydown(event);
       expect(spy).toBeCalledWith(true);
     });
@@ -233,7 +241,7 @@ describe('Pong', function () {
       Object.defineProperty(implementation['_leftPaddle'], 'auto', {
         get: () => false,
       });
-      const event = new KeyboardEvent('keydown', { key: 'KeyQ' });
+      const event = new KeyboardEvent('keydown', { code: 'KeyQ' });
       implementation.onkeydown(event);
       expect((Paddle as jest.Mock).mock.instances[0].moveUp).toBeCalled();
       expect((Paddle as jest.Mock).mock.instances[0].moveDown).not.toBeCalled();
@@ -243,7 +251,7 @@ describe('Pong', function () {
       Object.defineProperty(implementation['_leftPaddle'], 'auto', {
         get: () => false,
       });
-      const event = new KeyboardEvent('keydown', { key: 'KeyA' });
+      const event = new KeyboardEvent('keydown', { code: 'KeyA' });
       implementation.onkeydown(event);
       expect((Paddle as jest.Mock).mock.instances[0].moveUp).not.toBeCalled();
       expect((Paddle as jest.Mock).mock.instances[0].moveDown).toBeCalled();
@@ -253,7 +261,7 @@ describe('Pong', function () {
       Object.defineProperty(implementation['_rightPaddle'], 'auto', {
         get: () => false,
       });
-      const event = new KeyboardEvent('keydown', { key: 'KeyP' });
+      const event = new KeyboardEvent('keydown', { code: 'KeyP' });
       implementation.onkeydown(event);
       expect((Paddle as jest.Mock).mock.instances[1].moveUp).toBeCalled();
       expect((Paddle as jest.Mock).mock.instances[1].moveDown).not.toBeCalled();
@@ -263,7 +271,7 @@ describe('Pong', function () {
       Object.defineProperty(implementation['_rightPaddle'], 'auto', {
         get: () => false,
       });
-      const event = new KeyboardEvent('keydown', { key: 'KeyL' });
+      const event = new KeyboardEvent('keydown', { code: 'KeyL' });
       implementation.onkeydown(event);
       expect((Paddle as jest.Mock).mock.instances[1].moveUp).not.toBeCalled();
       expect((Paddle as jest.Mock).mock.instances[1].moveDown).toBeCalled();
@@ -275,7 +283,7 @@ describe('Pong', function () {
       Object.defineProperty(implementation['_leftPaddle'], 'auto', {
         get: () => false,
       });
-      const event = new KeyboardEvent('keyup', { key: 'KeyQ' });
+      const event = new KeyboardEvent('keyup', { code: 'KeyQ' });
       implementation.onkeyup(event);
       expect((Paddle as jest.Mock).mock.instances[0].stopMovingUp).toBeCalled();
       expect(
@@ -287,7 +295,7 @@ describe('Pong', function () {
       Object.defineProperty(implementation['_leftPaddle'], 'auto', {
         get: () => false,
       });
-      const event = new KeyboardEvent('keyup', { key: 'KeyA' });
+      const event = new KeyboardEvent('keyup', { code: 'KeyA' });
       implementation.onkeyup(event);
       expect(
         (Paddle as jest.Mock).mock.instances[0].stopMovingUp
@@ -301,7 +309,7 @@ describe('Pong', function () {
       Object.defineProperty(implementation['_rightPaddle'], 'auto', {
         get: () => false,
       });
-      const event = new KeyboardEvent('keyup', { key: 'KeyP' });
+      const event = new KeyboardEvent('keyup', { code: 'KeyP' });
       implementation.onkeyup(event);
       expect((Paddle as jest.Mock).mock.instances[1].stopMovingUp).toBeCalled();
       expect(
@@ -313,7 +321,7 @@ describe('Pong', function () {
       Object.defineProperty(implementation['_rightPaddle'], 'auto', {
         get: () => false,
       });
-      const event = new KeyboardEvent('keyup', { key: 'KeyL' });
+      const event = new KeyboardEvent('keyup', { code: 'KeyL' });
       implementation.onkeyup(event);
       expect(
         (Paddle as jest.Mock).mock.instances[1].stopMovingUp

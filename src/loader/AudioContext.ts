@@ -12,7 +12,7 @@ export class AudioContextFactory {
     if (!this._INSTANCE) {
       const AudioConstructor = window.AudioContext || window.webkitAudioContext;
       if (AudioConstructor) {
-        this._INSTANCE = new AudioConstructor();
+        this._INSTANCE = new AudioConstructor({});
       }
     }
 

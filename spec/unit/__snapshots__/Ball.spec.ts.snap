@@ -318,7 +318,6 @@ Ball {
   "_x": 10,
   "_y": 10,
   "accel": 8,
-  "bottom": 15,
   "dxChanged": false,
   "dyChanged": false,
   "footprintCount": 0,
@@ -329,6 +328,5 @@ Ball {
   "minY": 17,
   "showFootprints": undefined,
   "speed": 157.5,
-  "top": 5,
 }
 `;

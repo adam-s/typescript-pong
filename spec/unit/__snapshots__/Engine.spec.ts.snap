@@ -1,13 +1,77 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Engine renders stats to canvas 1`] = `
+exports[`Engine draws 1`] = `
 Array [
+  Object {
+    "props": Object {
+      "height": 100,
+      "width": 100,
+      "x": 0,
+      "y": 0,
+    },
+    "transform": Array [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "clearRect",
+  },
+  Object {
+    "props": Object {
+      "dHeight": 100,
+      "dWidth": 100,
+      "dx": 0,
+      "dy": 0,
+      "img": <canvas
+        height="100"
+        width="100"
+      />,
+      "sHeight": 100,
+      "sWidth": 100,
+      "sx": 0,
+      "sy": 0,
+    },
+    "transform": Array [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "drawImage",
+  },
+]
+`;
+
+exports[`Engine draws 2`] = `
+Array [
+  Object {
+    "props": Object {
+      "height": 100,
+      "width": 100,
+      "x": 0,
+      "y": 0,
+    },
+    "transform": Array [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "clearRect",
+  },
   Object {
     "props": Object {
       "maxWidth": null,
       "text": "frame: 0",
-      "x": -100,
-      "y": -60,
+      "x": 0,
+      "y": 40,
     },
     "transform": Array [
       1,
@@ -23,8 +87,8 @@ Array [
     "props": Object {
       "maxWidth": null,
       "text": "fps: 0",
-      "x": -100,
-      "y": -50,
+      "x": 0,
+      "y": 50,
     },
     "transform": Array [
       1,
@@ -40,8 +104,8 @@ Array [
     "props": Object {
       "maxWidth": null,
       "text": "update: 0ms",
-      "x": -100,
-      "y": -40,
+      "x": 0,
+      "y": 60,
     },
     "transform": Array [
       1,
@@ -57,8 +121,8 @@ Array [
     "props": Object {
       "maxWidth": null,
       "text": "draw: 0ms",
-      "x": -100,
-      "y": -30,
+      "x": 0,
+      "y": 70,
     },
     "transform": Array [
       1,
@@ -71,4 +135,87 @@ Array [
     "type": "fillText",
   },
 ]
+`;
+
+exports[`Engine renders stats to canvas 1`] = `
+Array [
+  Object {
+    "props": Object {
+      "maxWidth": null,
+      "text": "frame: 0",
+      "x": 0,
+      "y": 40,
+    },
+    "transform": Array [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "fillText",
+  },
+  Object {
+    "props": Object {
+      "maxWidth": null,
+      "text": "fps: 0",
+      "x": 0,
+      "y": 50,
+    },
+    "transform": Array [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "fillText",
+  },
+  Object {
+    "props": Object {
+      "maxWidth": null,
+      "text": "update: 0ms",
+      "x": 0,
+      "y": 60,
+    },
+    "transform": Array [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "fillText",
+  },
+  Object {
+    "props": Object {
+      "maxWidth": null,
+      "text": "draw: 0ms",
+      "x": 0,
+      "y": 70,
+    },
+    "transform": Array [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+    "type": "fillText",
+  },
+]
+`;
+
+exports[`Engine updates stats 1`] = `
+Object {
+  "count": 0,
+  "draw": 50,
+  "fps": 0,
+  "frame": 60,
+  "update": 10,
+}
 `;
